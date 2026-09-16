@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/colors.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/typography.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/radius.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/base.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/styles.css">
+<script src="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+:root {
+  --font-serif-display: 'Sora', 'Manrope', -apple-system, sans-serif;
+  --font-sans-ui: 'Figtree', 'Public Sans', -apple-system, sans-serif;
+  --font-mono-data: 'Space Grotesk', 'IBM Plex Mono', ui-monospace, monospace;
+  --surface-sunken: #F1F3F6;
+}
+body { margin: 0; font-variant-numeric: tabular-nums; background: #fff; font-family: var(--font-sans-ui); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+a { color: var(--text-link); text-decoration: none; }
+a:hover { color: var(--text-link-hover); }
+h1, h2, h3, h4, p { margin: 0; }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100%; overflow-x:hidden; background:#fff">
+
+  <div id="site-nav" style="position:fixed; top:0; left:0; right:0; zIndex:40; background:transparent; borderBottom:1px solid transparent; transition:background 260ms ease, border-color 260ms ease, backdrop-filter 260ms ease; overflow:hidden">
+    <div style="position:absolute; inset:0 0 auto 0; height:150%; pointerEvents:none; background:linear-gradient(180deg, rgba(16,17,20,0.62) 0%, rgba(16,17,20,0.28) 55%, rgba(16,17,20,0) 100%)"></div>
+    <div style="position:relative; display:flex; alignItems:center; justifyContent:space-between; gap:20px; padding:14px clamp(18px,4vw,56px); flexWrap:wrap">
+      <a href="BioFIA%20Home.dc.html" style="display:flex; alignItems:center; gap:12px">
+        <img src="assets/biofia-logo.png" alt="BioFIA, Biodiversity Finance Innovation Alliance" style="height:41px; width:75px; display:block; filter:brightness(0) invert(1)">
+      </a>
+      <div style="display:flex; alignItems:center; gap:clamp(12px,2vw,28px); flexWrap:wrap">
+        <a href="BioFIA-Working-Groups.dc.html" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:#fff">Working groups</a>
+        <a href="BioFIA-Protocol.dc.html" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)" style-hover="{{ navHover }}">The protocol</a>
+        <a href="BioFIA-Alliance.dc.html" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)" style-hover="{{ navHover }}">The alliance</a>
+        <a href="BioFIA%20Home.dc.html#join" style="display:inline-flex; alignItems:center; background:#fff; color:#14151A; fontFamily:var(--font-sans-ui); fontSize:13.5px; fontWeight:600; padding:9px 18px; borderRadius:var(--radius-pill)" style-hover="{{ ctaHover }}">Join the alliance</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:relative; width:100%; minHeight:min(66vh,620px); display:flex; alignItems:flex-end; overflow:hidden; background:#101114">
+    <img src="assets/frog-branch.jpg" alt="Glass frog climbing a branch at night in primary forest" style="position:absolute; inset:0; width:100%; height:100%; objectFit:cover; objectPosition:center 42%; display:block">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(16,17,20,0.8) 0%, rgba(16,17,20,0.56) 40%, rgba(16,17,20,0.94) 100%)"></div>
+    <div style="position:relative; width:100%; padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px) clamp(36px,4vw,56px)">
+      <div style="maxWidth:1320px; margin:0 auto">
+        <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.16em; textTransform:uppercase; color:var(--dark-accent-clay); marginBottom:22px">Our work</div>
+        <h1 style="font-family:var(--font-serif-display); fontSize:clamp(34px,5.6vw,76px); lineHeight:1.02; letterSpacing:-0.03em; fontWeight:800; color:#fff; maxWidth:20ch; marginBottom:22px; textWrap:pretty">Five working groups. One design process.</h1>
+        <p style="fontSize:clamp(16px,1.5vw,20px); lineHeight:1.6; color:rgba(255,255,255,0.86); maxWidth:58ch; textWrap:pretty">A market for natural assets cannot be built from one discipline. Each group advances a distinct system, and each is accountable to the others.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px) clamp(24px,3vw,40px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,330px),1fr)); gap:clamp(28px,5vw,80px); alignItems:start">
+      <div>
+        <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-clay); marginBottom:20px">How the groups work</div>
+        <h2 style="font-family:var(--font-serif-display); fontSize:clamp(26px,3.2vw,44px); lineHeight:1.08; letterSpacing:-0.02em; fontWeight:800; textWrap:pretty">Convene, design, prototype, hand it to the market.</h2>
+      </div>
+      <div style="display:flex; flexDirection:column; gap:16px; paddingTop:6px">
+        <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:var(--text-secondary); textWrap:pretty">Scientists, protectors, financiers, lawyers and policymakers sit in one design process rather than five separate conversations. Every instrument is defined, prototyped in real forests with real stewards, then released as an open standard.</p>
+        <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:var(--text-primary); fontWeight:600; textWrap:pretty">Protectors keep their data and their decisions throughout. Direct access to finance is the design constraint, not an aspiration.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="padding:clamp(24px,3vw,40px) clamp(20px,5vw,64px) clamp(56px,8vw,104px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:flex; flexDirection:column; gap:clamp(16px,2vw,24px)">
+
+      <div id="wg-01" style="background:var(--color-navy); borderRadius:var(--radius-md); padding:clamp(26px,3vw,48px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,3.5vw,56px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--dark-accent-clay); marginBottom:18px">Working group 01</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(22px,2.4vw,34px); lineHeight:1.12; letterSpacing:-0.02em; fontWeight:800; color:#fff; marginBottom:16px; textWrap:pretty">Digital Infrastructure</h3>
+          <p style="fontSize:16px; lineHeight:1.66; color:rgba(255,255,255,0.82); maxWidth:46ch; textWrap:pretty">Protocol design, the global forest map, asset mechanics, exchange and royalty rails, and low-bandwidth tools built for remote communities.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:rgba(255,255,255,0.55); marginBottom:16px">In scope</div>
+          <div style="display:flex; flexDirection:column; gap:10px; marginBottom:24px">
+            <div style="fontSize:15px; lineHeight:1.55; color:rgba(255,255,255,0.86); borderTop:1px solid rgba(255,255,255,0.16); paddingTop:10px">Protocol architecture and smart contract logic</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:rgba(255,255,255,0.86); borderTop:1px solid rgba(255,255,255,0.16); paddingTop:10px">A map-based global registry of protected forest</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:rgba(255,255,255,0.86); borderTop:1px solid rgba(255,255,255,0.16); paddingTop:10px">Wallets, payment rails and royalty flows to protectors</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:rgba(255,255,255,0.86); borderTop:1px solid rgba(255,255,255,0.16); paddingTop:10px">Field tools that work on a phone with no signal</div>
+          </div>
+          <div style="display:flex; gap:7px; flexWrap:wrap">
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:#fff; border:1px solid rgba(255,255,255,0.4); borderRadius:var(--radius-sm); padding:6px 10px">Blockchain</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:#fff; border:1px solid rgba(255,255,255,0.4); borderRadius:var(--radius-sm); padding:6px 10px">Marketplace</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:#fff; border:1px solid rgba(255,255,255,0.4); borderRadius:var(--radius-sm); padding:6px 10px">Exchange</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:#fff; border:1px solid rgba(255,255,255,0.4); borderRadius:var(--radius-sm); padding:6px 10px">Wallets</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:#fff; border:1px solid rgba(255,255,255,0.4); borderRadius:var(--radius-sm); padding:6px 10px">Dashboards</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:#fff; border:1px solid rgba(255,255,255,0.4); borderRadius:var(--radius-sm); padding:6px 10px">WhatsApp UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="wg-02" style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-indigo); borderRadius:var(--radius-md); padding:clamp(26px,3vw,48px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,3.5vw,56px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:18px">Working group 02</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(22px,2.4vw,34px); lineHeight:1.12; letterSpacing:-0.02em; fontWeight:800; color:var(--color-navy); marginBottom:16px; textWrap:pretty">Ecological &amp; Traditional Scientific Integrity</h3>
+          <p style="fontSize:16px; lineHeight:1.66; color:var(--text-secondary); maxWidth:46ch; textWrap:pretty">Verification science, digital MRV, forest health scoring, and Traditional Ecological Knowledge held as an intelligence layer rather than a consultation.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-muted); marginBottom:16px">In scope</div>
+          <div style="display:flex; flexDirection:column; gap:10px; marginBottom:24px">
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">What a healthy primary forest is, and how it is scored</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Community-led digital monitoring, reporting and verification</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Biodiversity measurement that stands up to an auditor</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Data sovereignty terms and eligibility criteria</div>
+          </div>
+          <div style="display:flex; gap:7px; flexWrap:wrap">
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">MRV design</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Biodiversity</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Data sovereignty</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Eligibility criteria</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Community governance</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="wg-03" style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-clay); borderRadius:var(--radius-md); padding:clamp(26px,3vw,48px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,3.5vw,56px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:18px">Working group 03</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(22px,2.4vw,34px); lineHeight:1.12; letterSpacing:-0.02em; fontWeight:800; color:var(--color-navy); marginBottom:16px; textWrap:pretty">Asset Class &amp; Market Strategy</h3>
+          <p style="fontSize:16px; lineHeight:1.66; color:var(--text-secondary); maxWidth:46ch; textWrap:pretty">Demand activation, buyer and brand partnerships, pricing, integration with existing credit markets, and the path from pilot to maturity.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-muted); marginBottom:16px">In scope</div>
+          <div style="display:flex; flexDirection:column; gap:10px; marginBottom:24px">
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Who buys a natural asset, and on what terms</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Pricing, impact bonds and investor structures</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Raising demand for the biodiversity credits already in market</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Participation routes for individuals, not just institutions</div>
+          </div>
+          <div style="display:flex; gap:7px; flexWrap:wrap">
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Impact bonds</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Investor circles</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Stacked credits</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">NDC demand</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Donor circles</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="wg-04" style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-navy); borderRadius:var(--radius-md); padding:clamp(26px,3vw,48px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,3.5vw,56px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:18px">Working group 04</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(22px,2.4vw,34px); lineHeight:1.12; letterSpacing:-0.02em; fontWeight:800; color:var(--color-navy); marginBottom:16px; textWrap:pretty">Governance &amp; Legal Architecture</h3>
+          <p style="fontSize:16px; lineHeight:1.66; color:var(--text-secondary); maxWidth:46ch; textWrap:pretty">Protocol rules, treasury design, the protector and science committees, land tenure, and the path to distributed governance.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-muted); marginBottom:16px">In scope</div>
+          <div style="display:flex; flexDirection:column; gap:10px; marginBottom:24px">
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Legal entity, liabilities framework and treasury</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">The Forest Protector Committee and the Science Committee</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Land tenure and rights verification</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Handing control of the protocol to its protectors</div>
+          </div>
+          <div style="display:flex; gap:7px; flexWrap:wrap">
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">BioFIA governance</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Forest Protector Committee</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Science Committee</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Land tenure</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="wg-05" style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-indigo); borderRadius:var(--radius-md); padding:clamp(26px,3vw,48px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,3.5vw,56px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:18px">Working group 05</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(22px,2.4vw,34px); lineHeight:1.12; letterSpacing:-0.02em; fontWeight:800; color:var(--color-navy); marginBottom:16px; textWrap:pretty">Policy &amp; Institutional Alignment</h3>
+          <p style="fontSize:16px; lineHeight:1.66; color:var(--text-secondary); maxWidth:46ch; textWrap:pretty">Standards accreditation, regulatory engagement, NDC and DFI pathways, and the institutional-grade positioning the market requires.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-muted); marginBottom:16px">In scope</div>
+          <div style="display:flex; flexDirection:column; gap:10px; marginBottom:24px">
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Accreditation with existing standards bodies</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Country NDC integration and carbon market regulation</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">DFI and multilateral engagement</div>
+            <div style="fontSize:15px; lineHeight:1.55; color:var(--text-secondary); borderTop:1px solid var(--border-default); paddingTop:10px">Due diligence standards institutions can underwrite</div>
+          </div>
+          <div style="display:flex; gap:7px; flexWrap:wrap">
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">NDC integration</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Carbon markets</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">DFI engagement</span>
+            <span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.08em; textTransform:uppercase; color:var(--text-secondary); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:6px 10px">Due diligence</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="background:var(--color-indigo-dark); color:#fff; padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,4vw,64px); alignItems:center">
+      <h2 style="font-family:var(--font-serif-display); fontSize:clamp(24px,2.8vw,40px); lineHeight:1.1; letterSpacing:-0.02em; fontWeight:800; color:#fff; textWrap:pretty">Bring your expertise into a working group.</h2>
+      <div>
+        <p style="fontSize:var(--text-body-lg); lineHeight:1.66; color:rgba(255,255,255,0.8); marginBottom:24px; textWrap:pretty">Groups meet continuously and publish what they design. If you work in verification science, market structure, law, policy or protocol engineering, there is a seat.</p>
+        <div style="display:flex; gap:14px; flexWrap:wrap; alignItems:center">
+          <a href="BioFIA%20Home.dc.html#join" style="display:inline-flex; alignItems:center; gap:10px; background:#fff; color:var(--color-indigo-dark); fontSize:15.5px; fontWeight:600; padding:14px 26px; borderRadius:var(--radius-pill)" style-hover="{{ ctaHover }}">Join the alliance</a>
+          <a href="BioFIA-Protocol.dc.html" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); borderBottom:1px solid currentColor; paddingBottom:4px">See the protocol →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#101114; color:#fff; padding:clamp(32px,4vw,52px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:flex; justifyContent:space-between; gap:24px; flexWrap:wrap; alignItems:center">
+      <a href="BioFIA%20Home.dc.html"><img src="assets/biofia-logo.png" alt="BioFIA" style="height:34px; width:59px; display:block; filter:brightness(0) invert(1)"></a>
+      <div style="display:flex; gap:clamp(14px,2vw,28px); flexWrap:wrap">
+        <a href="BioFIA-Working-Groups.dc.html" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Working groups</a>
+        <a href="BioFIA-Protocol.dc.html" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">The protocol</a>
+        <a href="BioFIA-Alliance.dc.html" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">The alliance</a>
+        <a href="BioFIA%20Home.dc.html#join" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Join</a>
+      </div>
+      <div style="font-family:var(--font-mono-data); fontSize:10.5px; color:rgba(255,255,255,0.35); letterSpacing:0.06em">CC BY-NC-SA 4.0 · BIOFIA 2026</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const nav = document.getElementById('site-nav');
+    if (nav) {
+      const onNavScroll = () => {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        const solid = y > 48;
+        nav.style.background = solid ? 'rgba(16,17,20,0.72)' : 'transparent';
+        nav.style.backdropFilter = solid ? 'saturate(150%) blur(12px)' : 'none';
+        nav.style.webkitBackdropFilter = solid ? 'saturate(150%) blur(12px)' : 'none';
+        nav.style.borderBottom = solid ? '1px solid rgba(255,255,255,0.12)' : '1px solid transparent';
+      };
+      onNavScroll();
+      window.addEventListener('scroll', onNavScroll, { passive: true });
+      this._navScroll = onNavScroll;
+    }
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; el.setAttribute('data-revealed', '1'); };
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { show(e.target); if (this._io) this._io.unobserve(e.target); } });
+    }, { threshold: 0.04, rootMargin: '0px 0px -4% 0px' });
+    els.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (el.getAttribute('data-revealed') === '1' || r.top < window.innerHeight * 0.92) { show(el); return; }
+      el.style.transition = 'opacity 520ms ease, transform 520ms ease';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      this._io.observe(el);
+    });
+    this._sweepTimer = setTimeout(() => els.forEach(show), 6000);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._sweepTimer) clearTimeout(this._sweepTimer);
+    if (this._navScroll) window.removeEventListener('scroll', this._navScroll);
+  }
+
+  renderVals() {
+    return {
+      navHover: { color: '#fff' },
+      ctaHover: { filter: 'brightness(0.92)' }
+    };
+  }
+}
+</script>
+</body>
+</html>
