@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Protocol — BioFIA</title>
+<meta name="description" content="Nature as a planetary central bank: how the BioFIA protocol turns verified protection into a credit, without adding another intermediary.">
+<link rel="canonical" href="https://biofia.org/protocol">
+<link rel="icon" type="image/png" href="assets/biofia-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BioFIA">
+<meta property="og:title" content="The Protocol — BioFIA">
+<meta property="og:description" content="Nature as a planetary central bank: how the BioFIA protocol turns verified protection into a credit, without adding another intermediary.">
+<meta property="og:image" content="https://biofia.org/assets/biofia-logo.png">
+<meta property="og:url" content="https://biofia.org/protocol">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Protocol — BioFIA">
+<meta name="twitter:description" content="Nature as a planetary central bank: how the BioFIA protocol turns verified protection into a credit.">
+<meta name="twitter:image" content="https://biofia.org/assets/biofia-logo.png">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/colors.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/typography.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/radius.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/base.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/styles.css">
+<script src="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+:root {
+  --font-serif-display: 'Sora', 'Manrope', -apple-system, sans-serif;
+  --font-sans-ui: 'Figtree', 'Public Sans', -apple-system, sans-serif;
+  --font-mono-data: 'Space Grotesk', 'IBM Plex Mono', ui-monospace, monospace;
+  --surface-sunken: #F1F3F6;
+}
+body { margin: 0; font-variant-numeric: tabular-nums; background: #fff; font-family: var(--font-sans-ui); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+a { color: var(--text-link); text-decoration: none; }
+a:hover { color: var(--text-link-hover); }
+h1, h2, h3, h4, p { margin: 0; }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100%; overflow-x:hidden; background:#fff">
+
+  <div id="site-nav" style="position:fixed; top:0; left:0; right:0; zIndex:40; background:transparent; borderBottom:1px solid transparent; transition:background 260ms ease, border-color 260ms ease, backdrop-filter 260ms ease; overflow:hidden">
+    <div style="position:absolute; inset:0 0 auto 0; height:150%; pointerEvents:none; background:linear-gradient(180deg, rgba(16,17,20,0.62) 0%, rgba(16,17,20,0.28) 55%, rgba(16,17,20,0) 100%)"></div>
+    <div style="position:relative; display:flex; alignItems:center; justifyContent:space-between; gap:20px; padding:14px clamp(18px,4vw,56px); flexWrap:wrap">
+      <a href="/" style="display:flex; alignItems:center; gap:12px">
+        <img src="assets/biofia-logo.png" alt="BioFIA, Biodiversity Finance Innovation Alliance" style="height:41px; width:75px; display:block; filter:brightness(0) invert(1)">
+      </a>
+      <div style="display:flex; alignItems:center; gap:clamp(12px,2vw,28px); flexWrap:wrap">
+        <a href="working-groups" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)" style-hover="{{ navHover }}">Working groups</a>
+        <a href="#how-it-works" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:#fff">The protocol</a>
+        <a href="alliance" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)" style-hover="{{ navHover }}">The alliance</a>
+        <a href="/#join" style="display:inline-flex; alignItems:center; background:#fff; color:#14151A; fontFamily:var(--font-sans-ui); fontSize:13.5px; fontWeight:600; padding:9px 18px; borderRadius:var(--radius-pill)" style-hover="{{ ctaHover }}">Join the alliance</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:relative; width:100%; minHeight:min(66vh,620px); display:flex; alignItems:flex-end; overflow:hidden; background:#101114">
+    <img src="assets/canopy.jpg" alt="Mist rising over unbroken primary tropical forest canopy" style="position:absolute; inset:0; width:100%; height:100%; objectFit:cover; display:block">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(16,17,20,0.82) 0%, rgba(16,17,20,0.58) 40%, rgba(16,17,20,0.94) 100%)"></div>
+    <div style="position:relative; width:100%; padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px) clamp(36px,4vw,56px)">
+      <div style="font-family: var(--font-mono-data); fontsize: 11.5px; letterspacing: 0.16em; texttransform: uppercase; color: var(--dark-accent-clay); marginbottom: 22px; font-size: 15px; text-transform: uppercase; position: static; top: 0px; padding-top: 10px; padding-bottom: 10px">THE STANDING FOREST PROTOCOL</div><div style="maxWidth:1320px; margin:0 auto">
+        
+        <h1 style="font-family:var(--font-serif-display); fontSize:clamp(34px,5.6vw,76px); lineHeight:1.02; letterSpacing:-0.03em; fontWeight:800; color:#fff; maxWidth:19ch; marginBottom:22px; textWrap:pretty">Nature as a planetary central bank.</h1>
+        <p style="fontSize:clamp(16px,1.5vw,20px); lineHeight:1.6; color:rgba(255,255,255,0.86); maxWidth:58ch; textWrap:pretty">The Standing Forest Token ecosystem turns the protection of one hectare into a tradable unit of value, pays its protector on every trade, and makes the yearly Nature Credit Bundle the proof that the forest still stands.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:clamp(20px,3vw,44px); marginBottom:clamp(32px,4vw,56px)">
+        <div style="borderTop:2px solid var(--color-navy); paddingTop:22px">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">THE STORE OF VALUE&nbsp;</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(20px,2vw,26px); lineHeight:1.2; fontWeight:700; color:var(--color-navy); marginBottom:12px">Nature</h3>
+          <p style="fontSize:15px; lineHeight:1.66; color:var(--text-secondary); textWrap:pretty">Living ecosystems are what every economy ultimately runs on. The protocol treats them as the reserve asset the system is denominated in, not as an externality priced at zero.</p>
+        </div>
+        <div style="borderTop:2px solid var(--color-indigo); paddingTop:22px">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">THE NATURE CREDIT BUNDLE&nbsp;</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(20px,2vw,26px); lineHeight:1.2; fontWeight:700; color:var(--color-indigo); marginBottom:12px">Protection</h3>
+          <p style="fontSize:15px; lineHeight:1.66; color:var(--text-secondary); textWrap:pretty">Each year a forest is verified standing, that protection is issued as a natural asset anyone can hold. Value comes from keeping it alive, not for cutting it down.</p>
+        </div>
+        <div style="borderTop:2px solid var(--color-clay); paddingTop:22px">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">The governors</div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(20px,2vw,26px); lineHeight:1.2; fontWeight:700; color:var(--color-clay-dark); marginBottom:12px">Protectors</h3>
+          <p style="fontSize:15px; lineHeight:1.66; color:var(--text-secondary); textWrap:pretty">Forest protectors, Indigenous Peoples and local communities set the rules, the standards and the supply. Governance sits with the people whose decisions keep the asset real.</p>
+        </div>
+      </div>
+      <div style="background:var(--surface-sunken); border:1px solid var(--border-default); borderRadius:var(--radius-md); padding:clamp(24px,3vw,44px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(20px,3vw,48px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--color-clay); marginBottom:16px">Direct access to finance</div>
+          <h2 style="font-family:var(--font-serif-display); fontSize:clamp(22px,2.4vw,32px); lineHeight:1.14; fontWeight:800; textWrap:pretty">The protocol is the plumbing, not another intermediary.</h2>
+        </div>
+        <p style="fontSize:16px; lineHeight:1.68; color:var(--text-secondary); textWrap:pretty">Verification, issuance, payment and governance are written into the rails themselves, so funds reach Indigenous Peoples and local communities continuously and on their own terms. BioFIA designs it in the open at standingforests.org, then hands it to the market and to the protectors who run it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="how-it-works" data-reveal="1" style="background:var(--color-navy); color:#fff; padding:clamp(56px,8vw,112px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,330px),1fr)); gap:clamp(28px,5vw,80px); alignItems:start; marginBottom:clamp(36px,4.5vw,64px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--dark-accent-clay); marginBottom:20px">How the ecosystem works</div>
+          <h2 style="font-family:var(--font-serif-display); fontSize:clamp(28px,3.6vw,50px); lineHeight:1.06; letterSpacing:-0.02em; fontWeight:800; color:#fff; textWrap:pretty">Protection becomes a currency. Verification becomes a credit.</h2>
+        </div>
+        <div style="display:flex; flexDirection:column; gap:18px; paddingTop:6px">
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:rgba(255,255,255,0.82); textWrap:pretty">Two instruments do all the work. A <strong style="color:#fff; fontWeight:600">Standing Forest Token</strong> represents the historical protection of one hectare and trades like a currency. A <strong style="color:#fff; fontWeight:600">Nature Credit Bundle</strong> is the yearly stacked credit that hectare produces. Both are minted to the forest protector.</p>
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:#fff; fontWeight:600; textWrap:pretty">Six steps, one loop, and the protector is paid at every turn of it.</p>
+        </div>
+      </div>
+
+      <div style="border:1px solid rgba(255,255,255,0.16); borderRadius:var(--radius-md); padding:clamp(22px,2.6vw,36px); marginBottom:clamp(20px,2.4vw,32px)">
+        <div style="display:flex; justifyContent:space-between; gap:12px; flexWrap:wrap; marginBottom:18px">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:#fff">Forest protector</div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)">Open market</div>
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)">Credit buyers and brands</div>
+        </div>
+        <div style="position:relative; height:3px; background:rgba(255,255,255,0.18); borderRadius:2px; marginBottom:18px">
+          <div style="position:absolute; top:-3.5px; left:0; width:10px; height:10px; borderRadius:999px; background:var(--dark-accent-clay)"></div>
+          <div style="position:absolute; top:-3.5px; left:50%; marginLeft:-5px; width:10px; height:10px; borderRadius:999px; background:#fff"></div>
+          <div style="position:absolute; top:-3.5px; right:0; width:10px; height:10px; borderRadius:999px; background:var(--dark-accent-clay)"></div>
+        </div>
+        <p style="fontSize:14.5px; lineHeight:1.6; color:rgba(255,255,255,0.72); maxWidth:76ch; textWrap:pretty">Tokens move out to the market. Money moves back to the protector: a fee on every trade, forever, plus the annual sale of the bundle itself.</p>
+      </div>
+
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:clamp(12px,1.4vw,18px); marginBottom:clamp(20px,2.4vw,32px)">
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:22px; fontWeight:500; color:#fff; lineHeight:1">01</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); border:1px solid rgba(255,255,255,0.28); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">SFT minted</div>
+          </div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(18px,1.6vw,21px); lineHeight:1.22; fontWeight:700; color:#fff; marginBottom:12px; textWrap:pretty">Historical protection is recognised</h3>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(255,255,255,0.75); textWrap:pretty">One hectare of primary tropical forest, verified as protected, mints one Standing Forest Token. It goes to the protector, and to nobody else.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:22px; fontWeight:500; color:#fff; lineHeight:1">02</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); border:1px solid rgba(255,255,255,0.28); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Fungible</div>
+          </div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(18px,1.6vw,21px); lineHeight:1.22; fontWeight:700; color:#fff; marginBottom:12px; textWrap:pretty">The protector holds a currency, not a grant</h3>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(255,255,255,0.75); textWrap:pretty">SFTs are fungible and tradable on the open market. Where Bitcoin mints to miners, this protocol mints to forest protectors.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:22px; fontWeight:500; color:#fff; lineHeight:1">03</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); border:1px solid rgba(255,255,255,0.28); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Royalties</div>
+          </div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(18px,1.6vw,21px); lineHeight:1.22; fontWeight:700; color:#fff; marginBottom:12px; textWrap:pretty">Every trade pays the protector again</h3>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(255,255,255,0.75); textWrap:pretty">Each time an SFT changes hands, a transaction fee is captured and redistributed to forest protection, in proportion to supply. For as long as the token trades.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:22px; fontWeight:500; color:#fff; lineHeight:1">04</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); border:1px solid rgba(255,255,255,0.28); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">NCB minted</div>
+          </div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(18px,1.6vw,21px); lineHeight:1.22; fontWeight:700; color:#fff; marginBottom:12px; textWrap:pretty">Each year, protection is re-verified</h3>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(255,255,255,0.75); textWrap:pretty">Annual forest-health verification mints a Nature Credit Bundle: one stacked credit of everything that hectare provides, composed by the protector. Verification keeps royalties flowing.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:22px; fontWeight:500; color:#fff; lineHeight:1">05</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); border:1px solid rgba(255,255,255,0.28); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Access</div>
+          </div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(18px,1.6vw,21px); lineHeight:1.22; fontWeight:700; color:#fff; marginBottom:12px; textWrap:pretty">An SFT is the key to a bundle</h3>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(255,255,255,0.75); textWrap:pretty">To buy a Nature Credit Bundle, a buyer must hold one SFT for it. Demand for high-integrity credits becomes demand for the currency of protection.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:22px; fontWeight:500; color:#fff; lineHeight:1">06</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); border:1px solid rgba(255,255,255,0.28); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Staking</div>
+          </div>
+          <h3 style="font-family:var(--font-serif-display); fontSize:clamp(18px,1.6vw,21px); lineHeight:1.22; fontWeight:700; color:#fff; marginBottom:12px; textWrap:pretty">Buyers compete for specific forests</h3>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(255,255,255,0.75); textWrap:pretty">Corporates and impact buyers stake SFTs onto the forests they care about. Staking earns public supporter status on the map, first right to that hectare’s bundles, and the obligation to buy them each year.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(16px,2vw,24px)">
+        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); borderRadius:var(--radius-md); padding:clamp(22px,2.6vw,32px)">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:var(--dark-accent-clay); marginBottom:22px">Where a transaction fee goes</div>
+          <div style="display:flex; flexDirection:column; gap:20px; marginBottom:20px">
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="fontSize:15px; fontWeight:600; color:#fff">Forest protectors</div>
+              <div style="fontSize:13.5px; lineHeight:1.5; color:rgba(255,255,255,0.65); maxWidth:46ch">the majority share, distributed in proportion to the protection they hold.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:rgba(255,255,255,0.1); overflow:hidden"><div style="width:74%; height:100%; background:var(--dark-accent-clay)"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="fontSize:15px; fontWeight:600; color:#fff">Protector crisis fund</div>
+              <div style="fontSize:13.5px; lineHeight:1.5; color:rgba(255,255,255,0.65); maxWidth:46ch">reserved against fire, storm and drought, and for regeneration afterwards.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:rgba(255,255,255,0.1); overflow:hidden"><div style="width:18%; height:100%; background:rgba(255,255,255,0.85)"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="fontSize:15px; fontWeight:600; color:#fff">System maintenance</div>
+              <div style="fontSize:13.5px; lineHeight:1.5; color:rgba(255,255,255,0.65); maxWidth:46ch">a minority share to run verification, the platform and protector support.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:rgba(255,255,255,0.1); overflow:hidden"><div style="width:8%; height:100%; background:rgba(255,255,255,0.45)"></div></div>
+          </div>
+          </div>
+          <p style="fontSize:13px; lineHeight:1.6; color:rgba(255,255,255,0.55)">Illustrative split. Final parameters are set by protocol governance, and every flow is publicly visible.</p>
+        </div>
+        <div style="background:var(--dark-accent-clay); borderRadius:var(--radius-md); padding:clamp(22px,2.6vw,32px); display:flex; flexDirection:column; gap:clamp(18px,2vw,26px)">
+          <div>
+            <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.12em; textTransform:uppercase; color:rgba(20,21,26,0.7); marginBottom:18px">Scale of the loop</div>
+            <div style="font-family:var(--font-mono-data); fontSize:clamp(34px,4vw,56px); fontWeight:500; color:#14151A; lineHeight:1; marginBottom:14px">~$4B</div>
+            <p style="fontSize:15.5px; lineHeight:1.6; color:#14151A; fontWeight:600; textWrap:pretty">a year to forest protectors, from transaction fees alone, at just 1% of Bitcoin’s average trading volume.</p>
+          </div>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:rgba(20,21,26,0.8); textWrap:pretty">Under 1 billion hectares of primary tropical forest remain, so supply is finite by definition. The longer a forest stands, the more the system pays to keep it standing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="incentives" data-reveal="1" style="padding:clamp(56px,8vw,112px) clamp(20px,5vw,64px); background:#fff">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,330px),1fr)); gap:clamp(28px,5vw,80px); alignItems:start; marginBottom:clamp(36px,4.5vw,64px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-clay); marginBottom:20px">Layered incentives</div>
+          <h2 style="font-family:var(--font-serif-display); fontSize:clamp(28px,3.6vw,50px); lineHeight:1.06; letterSpacing:-0.02em; fontWeight:800; textWrap:pretty">Everyone who wants the credits needs the token.</h2>
+        </div>
+        <div style="display:flex; flexDirection:column; gap:18px; paddingTop:6px">
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:var(--text-secondary); textWrap:pretty">Four kinds of buyer arrive for four different reasons, and all four routes run through the same instrument. Nature Credit Bundles cannot be held without Standing Forest Tokens, so every layer of demand for credits becomes demand for the unit that pays protectors.</p>
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:var(--text-primary); fontWeight:600; textWrap:pretty">Protection becomes the scarce thing everyone is competing to hold.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:clamp(12px,1.4vw,18px); marginBottom:clamp(28px,3.4vw,48px)">
+        <div style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-navy); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,30px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark)">01</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.08em; textTransform:uppercase; color:var(--color-clay-dark); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Access</div>
+          </div>
+          <h4 style="font-family:var(--font-serif-display); fontSize:18px; lineHeight:1.25; fontWeight:700; marginBottom:12px; textWrap:pretty">Impact buyers and ESG funds</h4>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:var(--text-secondary); textWrap:pretty">They want high-integrity, place-based credits with a verifiable story. Holding SFTs is what gives them the right to buy the bundles.</p>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-navy); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,30px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark)">02</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.08em; textTransform:uppercase; color:var(--color-clay-dark); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Visibility</div>
+          </div>
+          <h4 style="font-family:var(--font-serif-display); fontSize:18px; lineHeight:1.25; fontWeight:700; marginBottom:12px; textWrap:pretty">Corporates and brands</h4>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:var(--text-secondary); textWrap:pretty">Staking SFTs onto named forests earns public supporter status on the map, with the accountability of buying that hectare’s bundle every year.</p>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-navy); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,30px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark)">03</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.08em; textTransform:uppercase; color:var(--color-clay-dark); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Compliance</div>
+          </div>
+          <h4 style="font-family:var(--font-serif-display); fontSize:18px; lineHeight:1.25; fontWeight:700; marginBottom:12px; textWrap:pretty">Countries and NDCs</h4>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:var(--text-secondary); textWrap:pretty">Sovereign buyers meeting biodiversity and climate commitments acquire tokens to secure long-term access to verified national and cross-border supply.</p>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-navy); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,30px); display:flex; flexDirection:column">
+          <div style="display:flex; justifyContent:space-between; gap:10px; alignItems:baseline; marginBottom:16px">
+            <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark)">04</div>
+            <div style="font-family:var(--font-mono-data); fontSize:10px; letterSpacing:0.08em; textTransform:uppercase; color:var(--color-clay-dark); border:1px solid var(--border-strong); borderRadius:var(--radius-sm); padding:5px 9px; whiteSpace:nowrap">Exposure</div>
+          </div>
+          <h4 style="font-family:var(--font-serif-display); fontSize:18px; lineHeight:1.25; fontWeight:700; marginBottom:12px; textWrap:pretty">Investors and institutions</h4>
+          <p style="fontSize:14.5px; lineHeight:1.62; color:var(--text-secondary); textWrap:pretty">A finite asset tied to a shrinking resource, with perpetual royalty flows attached, reads as natural capital exposure rather than a donation.</p>
+        </div>
+      </div><div style="background:var(--surface-sunken); border:1px solid var(--border-default); borderRadius:var(--radius-md); padding:clamp(24px,3vw,44px)">
+        <div style="display:flex; justifyContent:space-between; gap:18px; flexWrap:wrap; alignItems:baseline; marginBottom:clamp(24px,3vw,36px)">
+          <h3 style="font-family: var(--font-serif-display); fontsize: clamp(20px,2.2vw,30px); lineheight: 1.14; fontweight: 800; maxwidth: 30ch; textwrap: pretty; width: 655px; height: 38px; font-size: 24px">Manage millions. Mobilise billions. Anchor trillions.</h3><div style="font-family: var(--font-mono-data); fontsize: 11px; letterspacing: 0.12em; texttransform: uppercase; color: var(--text-muted); padding-left: 10px; padding-right: 10px">Capital pathway</div>
+          
+        </div>
+        <div style="display:flex; flexDirection:column; gap:clamp(18px,2.2vw,28px); marginBottom:clamp(24px,3vw,36px)">
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="font-family:var(--font-mono-data); fontSize:clamp(20px,2.2vw,30px); fontWeight:500; color:var(--color-navy); lineHeight:1">$5M</div>
+              <div style="fontSize:14px; lineHeight:1.5; color:var(--text-secondary); maxWidth:44ch"><strong style="color:var(--text-primary); fontWeight:600">Catalytic.</strong> philanthropic and grant capital builds the protocol and activates the first supply.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:#fff; border:1px solid var(--border-default); overflow:hidden"><div style="width:2%; minWidth:6px; height:100%; background:var(--color-clay)"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="font-family:var(--font-mono-data); fontSize:clamp(20px,2.2vw,30px); fontWeight:500; color:var(--color-navy); lineHeight:1">$100M+</div>
+              <div style="fontSize:14px; lineHeight:1.5; color:var(--text-secondary); maxWidth:44ch"><strong style="color:var(--text-primary); fontWeight:600">De-risked demand.</strong> concessional and public capital, with the first bundle purchase agreements closed.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:#fff; border:1px solid var(--border-default); overflow:hidden"><div style="width:12%; minWidth:6px; height:100%; background:var(--color-clay)"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="font-family:var(--font-mono-data); fontSize:clamp(20px,2.2vw,30px); fontWeight:500; color:var(--color-navy); lineHeight:1">$1B+</div>
+              <div style="fontSize:14px; lineHeight:1.5; color:var(--text-secondary); maxWidth:44ch"><strong style="color:var(--text-primary); fontWeight:600">Market maturity.</strong> institutional and retail capital enters a functioning, liquid market.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:#fff; border:1px solid var(--border-default); overflow:hidden"><div style="width:38%; minWidth:6px; height:100%; background:var(--color-clay)"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justifyContent:space-between; gap:14px; flexWrap:wrap; alignItems:baseline; marginBottom:10px">
+              <div style="font-family:var(--font-mono-data); fontSize:clamp(20px,2.2vw,30px); fontWeight:500; color:var(--color-navy); lineHeight:1">$1T+</div>
+              <div style="fontSize:14px; lineHeight:1.5; color:var(--text-secondary); maxWidth:44ch"><strong style="color:var(--text-primary); fontWeight:600">Asset class adoption.</strong> standing forest protection held as a global reserve asset.</div>
+            </div>
+            <div style="height:12px; borderRadius:var(--radius-sm); background:#fff; border:1px solid var(--border-default); overflow:hidden"><div style="width:100%; minWidth:6px; height:100%; background:var(--color-clay)"></div></div>
+          </div>
+        </div>
+        <div style="display:flex; gap:clamp(20px,3vw,48px); flexWrap:wrap; alignItems:flex-start; paddingTop:clamp(22px,2.6vw,32px); borderTop:1px solid var(--border-default)">
+          <div style="flex:0 1 260px; font-family:var(--font-serif-display); fontSize:clamp(19px,2vw,26px); lineHeight:1.2; fontWeight:700; color:var(--color-clay-dark)">Investors and protectors gain from the same thing</div>
+          <p style="flex:1 1 380px; fontSize:15.5px; lineHeight:1.68; color:var(--text-secondary); textWrap:pretty">As institutional capital arrives, the token that represents protection appreciates and the fee flowing to protectors grows with it. There is no version of this market where holders do well and the forest does badly.</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+  <div id="natural-assets" data-reveal="1" style="background:var(--surface-sunken); borderTop:1px solid var(--border-default); borderBottom:1px solid var(--border-default); padding:clamp(56px,8vw,112px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(28px,5vw,80px); alignItems:start; marginBottom:clamp(40px,5vw,72px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-clay); marginBottom:20px">Natural assets</div>
+          <h2 style="font-family:var(--font-serif-display); fontSize:clamp(28px,3.6vw,50px); lineHeight:1.06; letterSpacing:-0.02em; fontWeight:800; textWrap:pretty">We innovate the natural assets the market is missing.</h2>
+        </div>
+        <div style="display:flex; flexDirection:column; gap:18px; paddingTop:6px">
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:var(--text-secondary); textWrap:pretty">An emerging biodiversity credit market needs instruments that investors can hold, verifiers can stand behind, and forest protectors actually control. BioFIA's working groups design and prototype those instruments, then hand them to the market rather than owning them.</p>
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.68; color:var(--text-primary); fontWeight:600; textWrap:pretty">We are allies to the biodiversity credit market. The Standing Forest Protocol is built to raise demand for credits, not to replace the developers and certifiers producing them.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:clamp(12px,1.4vw,18px)">
+        <div style="background:#fff; border:1px solid var(--border-default); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,32px)">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">01</div>
+          <h4 style="fontSize:17px; fontWeight:700; marginBottom:10px">Convene the frontier</h4>
+          <p style="fontSize:14.5px; lineHeight:1.6; color:var(--text-secondary)">Scientists, protectors, financiers, lawyers and policymakers in one design process rather than five separate conversations.</p>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border-default); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,32px)">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">02</div>
+          <h4 style="fontSize:17px; fontWeight:700; marginBottom:10px">Design the instrument</h4>
+          <p style="fontSize:14.5px; lineHeight:1.6; color:var(--text-secondary)">Define what is measured, who issues it, who is paid, and what makes it credible to an institutional buyer.</p>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border-default); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,32px)">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">03</div>
+          <h4 style="fontSize:17px; fontWeight:700; marginBottom:10px">Prototype with protectors</h4>
+          <p style="fontSize:14.5px; lineHeight:1.6; color:var(--text-secondary)">Test in real forests with real stewards, under agreements that keep their data and decisions their own.</p>
+        </div>
+        <div style="background:#fff; border:1px solid var(--border-default); borderRadius:var(--radius-md); padding:clamp(22px,2.4vw,32px)">
+          <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-stone-dark); marginBottom:14px">04</div>
+          <h4 style="fontSize:17px; fontWeight:700; marginBottom:10px">Hand it to the market</h4>
+          <p style="fontSize:14.5px; lineHeight:1.6; color:var(--text-secondary)">Open standards, accredited verifiers, and a support network of allies serving protectors once capital flows.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="background:#101114; color:#fff; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+    <div style="padding:clamp(40px,6vw,88px) clamp(20px,5vw,64px); display:flex; flexDirection:column; justifyContent:center; gap:clamp(18px,2.2vw,26px)">
+      <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--dark-accent-clay)">Integrity</div>
+      <h2 style="font-family:var(--font-serif-display); fontSize:clamp(26px,3.2vw,44px); lineHeight:1.08; letterSpacing:-0.02em; fontWeight:800; color:#fff; maxWidth:22ch; textWrap:pretty">Biodiversity is not a co-benefit of the carbon trade.</h2>
+      <p style="fontSize:clamp(15.5px,1.4vw,18px); lineHeight:1.66; color:rgba(255,255,255,0.8); maxWidth:52ch; textWrap:pretty">Carbon is one molecule inside a living system. The protocol scores the health of the whole hectare first, then lets the protector choose which benefits enter the bundle and which are never listed at all.</p>
+      <div style="display:flex; flexDirection:column; gap:12px; maxWidth:52ch">
+        <div style="borderTop:1px solid rgba(255,255,255,0.18); paddingTop:12px; display:flex; gap:16px; flexWrap:wrap; justifyContent:space-between"><span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Verified every year</span><span style="fontSize:14.5px; fontWeight:600; color:#fff">Forest cover, biodiversity, carbon</span></div>
+        <div style="borderTop:1px solid rgba(255,255,255,0.18); paddingTop:12px; display:flex; gap:16px; flexWrap:wrap; justifyContent:space-between"><span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Chosen by the protector</span><span style="fontSize:14.5px; fontWeight:600; color:#fff">Water, soil, community, bio-economy</span></div>
+        <div style="borderTop:1px solid rgba(255,255,255,0.18); paddingTop:12px; display:flex; gap:16px; flexWrap:wrap; justifyContent:space-between"><span style="font-family:var(--font-mono-data); fontSize:10.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Measured by</span><span style="fontSize:14.5px; fontWeight:600; color:#fff">Community-led dMRV and accredited partners</span></div>
+      </div>
+      <p style="fontSize:clamp(15.5px,1.4vw,18px); lineHeight:1.6; fontWeight:600; color:var(--dark-accent-clay); maxWidth:46ch; textWrap:pretty">A glass frog’s habitat is not a footnote to a tonne of CO2. It is part of what the credit is for.</p>
+    </div>
+    <div style="position:relative; minHeight:clamp(420px,46vw,640px); overflow:hidden; background:#000">
+      <img src="assets/frog-portrait.jpg" alt="Glass frog photographed at close range in primary tropical forest" style="position:absolute; inset:0; width:100%; height:100%; objectFit:cover; objectPosition:center 24%; display:block">
+    </div>
+  </div>
+
+  <div data-reveal="1" style="padding:clamp(56px,8vw,112px) clamp(20px,5vw,64px); background:#fff">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="display:flex; justifyContent:space-between; gap:28px; flexWrap:wrap; alignItems:flex-end; marginBottom:clamp(32px,4vw,56px)">
+        <div>
+          <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--color-clay); marginBottom:18px">An asset we are building now</div>
+          <h2 style="font-family:var(--font-serif-display); fontSize:clamp(28px,3.6vw,50px); lineHeight:1.06; letterSpacing:-0.02em; fontWeight:800; marginBottom:16px; textWrap:pretty">The nature credit bundle</h2>
+          <p style="fontSize:var(--text-body-lg); lineHeight:1.66; color:var(--text-secondary); maxWidth:64ch; textWrap:pretty">A hectare of primary forest produces far more than carbon. Each year a forest is verified standing, its protector issues one stacked credit, and decides what goes into it. Add and remove layers below.</p>
+        </div>
+        <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.08em; color:var(--text-muted); textTransform:uppercase">Composed by the protector</div>
+      </div>
+
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,400px),1fr)); gap:clamp(20px,2.6vw,36px); alignItems:start">
+        <div style="display:flex; flexDirection:column; gap:12px">
+          <div style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-clay); borderRadius:var(--radius-md); boxShadow:var(--shadow-card); padding:clamp(20px,2.2vw,26px)">
+            <div style="display:flex; justifyContent:space-between; gap:12px; alignItems:baseline; marginBottom:14px; flexWrap:wrap">
+              <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-clay)">Layer 03 · Bio-economy</div>
+              <div style="font-family:var(--font-mono-data); fontSize:11px; color:var(--text-muted); textTransform:uppercase">Optional</div>
+            </div>
+            <div style="display:flex; gap:8px; flexWrap:wrap">
+              <sc-for list="{{ bioLayer }}" as="item" hint-placeholder-count="4">
+                <button type="button" onClick="{{ item.toggle }}" style="{{ item.chipStyle }}">{{ item.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="background:#fff; border:1px solid var(--border-default); borderTop:3px solid var(--color-indigo); borderRadius:var(--radius-md); boxShadow:var(--shadow-card); padding:clamp(20px,2.2vw,26px)">
+            <div style="display:flex; justifyContent:space-between; gap:12px; alignItems:baseline; marginBottom:14px; flexWrap:wrap">
+              <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--color-indigo)">Layer 02 · Ecosystem services</div>
+              <div style="font-family:var(--font-mono-data); fontSize:11px; color:var(--text-muted); textTransform:uppercase">Optional</div>
+            </div>
+            <div style="display:flex; gap:8px; flexWrap:wrap">
+              <sc-for list="{{ ecoLayer }}" as="item" hint-placeholder-count="3">
+                <button type="button" onClick="{{ item.toggle }}" style="{{ item.chipStyle }}">{{ item.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="background:var(--color-navy); border:1px solid var(--color-navy); borderRadius:var(--radius-md); boxShadow:var(--shadow-card); padding:clamp(20px,2.2vw,26px)">
+            <div style="display:flex; justifyContent:space-between; gap:12px; alignItems:baseline; marginBottom:14px; flexWrap:wrap">
+              <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:#fff">Layer 01 · Base</div>
+              <div style="font-family:var(--font-mono-data); fontSize:11px; color:rgba(255,255,255,0.72); textTransform:uppercase">Required · always verified</div>
+            </div>
+            <div style="display:flex; gap:8px; flexWrap:wrap">
+              <span style="font-family:var(--font-sans-ui); fontSize:13.5px; fontWeight:600; color:var(--color-navy); background:#fff; borderRadius:var(--radius-pill); padding:8px 15px">Forest cover</span>
+              <span style="font-family:var(--font-sans-ui); fontSize:13.5px; fontWeight:600; color:var(--color-navy); background:#fff; borderRadius:var(--radius-pill); padding:8px 15px">Biodiversity data</span>
+              <span style="font-family:var(--font-sans-ui); fontSize:13.5px; fontWeight:600; color:var(--color-navy); background:#fff; borderRadius:var(--radius-pill); padding:8px 15px">Carbon</span>
+            </div>
+            <p style="fontSize:13.5px; lineHeight:1.6; color:rgba(255,255,255,0.78); marginTop:14px">No bundle is issued without this floor. It is what makes the credit legible to an institutional buyer.</p>
+          </div>
+        </div>
+
+        <div style="background:#fff; border:1px solid var(--border-default); borderRadius:var(--radius-md); boxShadow:var(--shadow-card); overflow:hidden">
+          <div style="padding:clamp(20px,2.2vw,28px); borderBottom:1px solid var(--border-default)">
+            <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-muted); marginBottom:16px">This year's bundle · 1 hectare</div>
+            <div style="display:flex; alignItems:baseline; gap:14px; flexWrap:wrap">
+              <div style="font-family:var(--font-mono-data); fontSize:clamp(40px,4.4vw,64px); fontWeight:500; color:var(--color-clay); lineHeight:1">{{ bundleCount }}</div>
+              <div style="fontSize:15px; lineHeight:1.5; color:var(--text-secondary); maxWidth:26ch">benefits stacked into one verified credit</div>
+            </div>
+          </div>
+          <div style="padding:clamp(20px,2.2vw,28px); display:flex; flexDirection:column; gap:10px">
+            <sc-for list="{{ bundleRows }}" as="row" hint-placeholder-count="6">
+              <div style="display:flex; justifyContent:space-between; gap:14px; alignItems:center; paddingBottom:10px; borderBottom:1px solid var(--border-default)">
+                <div style="fontSize:14.5px; fontWeight:600">{{ row.label }}</div>
+                <div style="font-family:var(--font-mono-data); fontSize:11px; letterSpacing:0.08em; textTransform:uppercase; color:{{ row.tagColor }}">{{ row.tier }}</div>
+              </div>
+            </sc-for>
+            <p style="fontSize:13.5px; lineHeight:1.62; color:var(--text-secondary); marginTop:6px">Data sovereignty stays with the protector: they choose what is measured, what is sold, and what is never listed at all.</p>
+          </div>
+          <div style="padding:clamp(20px,2.2vw,28px); background:var(--surface-sunken); borderTop:1px solid var(--border-default)">
+            <p style="fontSize:14.5px; lineHeight:1.62; color:var(--text-secondary); marginBottom:16px">This bundle is one piece of a wider natural asset protocol under development with our allies.</p>
+            <a href="https://standingforests.org" target="_blank" rel="noopener" style="display:inline-flex; alignItems:center; gap:10px; background:var(--color-navy); color:#fff; fontSize:15px; fontWeight:600; padding:13px 24px; borderRadius:var(--radius-pill)" style-hover="{{ navyHover }}">See the full protocol at standingforests.org →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--color-indigo-dark); color:#fff; padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,4vw,64px); alignItems:center">
+      <h2 style="font-family:var(--font-serif-display); fontSize:clamp(24px,2.8vw,40px); lineHeight:1.1; letterSpacing:-0.02em; fontWeight:800; color:#fff; textWrap:pretty">Build the protocol with us.</h2>
+      <div>
+        <p style="fontSize:var(--text-body-lg); lineHeight:1.66; color:rgba(255,255,255,0.8); marginBottom:24px; textWrap:pretty">Buyers, credit developers, verifiers and capital partners all shape what this instrument becomes. The design process is open.</p>
+        <div style="display:flex; gap:14px; flexWrap:wrap; alignItems:center">
+          <a href="/#join" style="display:inline-flex; alignItems:center; gap:10px; background:#fff; color:var(--color-indigo-dark); fontSize:15.5px; fontWeight:600; padding:14px 26px; borderRadius:var(--radius-pill)" style-hover="{{ ctaHover }}">Join the alliance</a>
+          <a href="working-groups" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); borderBottom:1px solid currentColor; paddingBottom:4px">The working groups →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#101114; color:#fff; padding:clamp(32px,4vw,52px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:flex; justifyContent:space-between; gap:24px; flexWrap:wrap; alignItems:center">
+      <a href="/"><img src="assets/biofia-logo.png" alt="BioFIA" style="height:34px; width:59px; display:block; filter:brightness(0) invert(1)"></a>
+      <div style="display:flex; gap:clamp(14px,2vw,28px); flexWrap:wrap">
+        <a href="working-groups" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Working groups</a>
+        <a href="protocol" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">The protocol</a>
+        <a href="alliance" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">The alliance</a>
+        <a href="https://standingforests.org" target="_blank" rel="noopener" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">standingforests.org</a>
+      </div>
+      <div style="font-family:var(--font-mono-data); fontSize:10.5px; color:rgba(255,255,255,0.35); letterSpacing:0.06em">CC BY-NC-SA 4.0 · BIOFIA 2026</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bundlePreset&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;minimal&quot;,&quot;typical&quot;,&quot;maximal&quot;],&quot;default&quot;:&quot;typical&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Credit bundle&quot;}}">
+const ECO = [
+  { id: 'water', label: 'Water security' },
+  { id: 'soil', label: 'Soil health' },
+  { id: 'community', label: 'Community impact' }
+];
+const BIO = [
+  { id: 'nuts', label: 'Brazil nut & NTFPs' },
+  { id: 'tourism', label: 'Eco-tourism access' },
+  { id: 'bioprospect', label: 'Bioprospecting rights' },
+  { id: 'seed', label: 'Seed preservation' }
+];
+const PRESETS = {
+  minimal: [],
+  typical: ['water', 'community'],
+  maximal: ['water', 'soil', 'community', 'nuts', 'tourism', 'bioprospect', 'seed']
+};
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const preset = PRESETS[props.bundlePreset] || PRESETS.typical;
+    this.state = { selected: preset.slice() };
+  }
+
+  toggle(id) {
+    this.setState(s => ({
+      selected: s.selected.indexOf(id) === -1 ? s.selected.concat([id]) : s.selected.filter(x => x !== id)
+    }));
+  }
+
+  chipStyle(on, accent) {
+    return {
+      fontFamily: 'var(--font-sans-ui)',
+      fontSize: '13.5px',
+      fontWeight: 600,
+      padding: '8px 15px',
+      borderRadius: 'var(--radius-pill)',
+      cursor: 'pointer',
+      transition: 'background 160ms ease, color 160ms ease, border-color 160ms ease',
+      background: on ? accent : 'transparent',
+      color: on ? '#fff' : 'var(--text-secondary)',
+      border: on ? '1px solid ' + accent : '1px dashed var(--border-strong)'
+    };
+  }
+
+  componentDidMount() {
+    const nav = document.getElementById('site-nav');
+    if (nav) {
+      const onNavScroll = () => {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        const solid = y > 48;
+        nav.style.background = solid ? 'rgba(16,17,20,0.72)' : 'transparent';
+        nav.style.backdropFilter = solid ? 'saturate(150%) blur(12px)' : 'none';
+        nav.style.webkitBackdropFilter = solid ? 'saturate(150%) blur(12px)' : 'none';
+        nav.style.borderBottom = solid ? '1px solid rgba(255,255,255,0.12)' : '1px solid transparent';
+      };
+      onNavScroll();
+      window.addEventListener('scroll', onNavScroll, { passive: true });
+      this._navScroll = onNavScroll;
+    }
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; el.setAttribute('data-revealed', '1'); };
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { show(e.target); if (this._io) this._io.unobserve(e.target); } });
+    }, { threshold: 0.04, rootMargin: '0px 0px -4% 0px' });
+    els.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (el.getAttribute('data-revealed') === '1' || r.top < window.innerHeight * 0.92) { show(el); return; }
+      el.style.transition = 'opacity 520ms ease, transform 520ms ease';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      this._io.observe(el);
+    });
+    this._sweepTimer = setTimeout(() => els.forEach(show), 6000);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._sweepTimer) clearTimeout(this._sweepTimer);
+    if (this._navScroll) window.removeEventListener('scroll', this._navScroll);
+  }
+
+  renderVals() {
+    const sel = this.state.selected;
+    const mk = (items, accent) => items.map(it => ({
+      label: it.label,
+      toggle: () => this.toggle(it.id),
+      chipStyle: this.chipStyle(sel.indexOf(it.id) !== -1, accent)
+    }));
+    const rows = [
+      { label: 'Forest cover', tier: 'Base', tagColor: 'var(--color-navy)' },
+      { label: 'Biodiversity data', tier: 'Base', tagColor: 'var(--color-navy)' },
+      { label: 'Carbon', tier: 'Base', tagColor: 'var(--color-navy)' }
+    ];
+    ECO.forEach(it => { if (sel.indexOf(it.id) !== -1) rows.push({ label: it.label, tier: 'Ecosystem', tagColor: 'var(--color-indigo)' }); });
+    BIO.forEach(it => { if (sel.indexOf(it.id) !== -1) rows.push({ label: it.label, tier: 'Bio-economy', tagColor: 'var(--color-clay-dark)' }); });
+    return {
+      ecoLayer: mk(ECO, 'var(--color-indigo)'),
+      bioLayer: mk(BIO, 'var(--color-clay)'),
+      bundleRows: rows,
+      bundleCount: String(rows.length).padStart(2, '0'),
+      navHover: { color: '#fff' },
+      ctaHover: { filter: 'brightness(0.92)' },
+      navyHover: { filter: 'brightness(1.18)' }
+    };
+  }
+}
+</script>
+</body>
+</html>

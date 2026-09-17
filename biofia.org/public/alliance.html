@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Alliance — BioFIA</title>
+<meta name="description" content="Twenty-plus organisations are already building BioFIA's financial instruments for nature. Add your organisation to the alliance.">
+<link rel="canonical" href="https://biofia.org/alliance">
+<link rel="icon" type="image/png" href="assets/biofia-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BioFIA">
+<meta property="og:title" content="The Alliance — BioFIA">
+<meta property="og:description" content="Twenty-plus organisations are already building BioFIA's financial instruments for nature. Add your organisation to the alliance.">
+<meta property="og:image" content="https://biofia.org/assets/biofia-logo.png">
+<meta property="og:url" content="https://biofia.org/alliance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Alliance — BioFIA">
+<meta name="twitter:description" content="Twenty-plus organisations are already building BioFIA's financial instruments for nature.">
+<meta name="twitter:image" content="https://biofia.org/assets/biofia-logo.png">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/colors.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/typography.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/radius.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/tokens/base.css">
+<link rel="stylesheet" href="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/styles.css">
+<script src="_ds/biofia-design-system-0c35a6e3-c8aa-4ca0-bc21-97d15bc652c9/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+:root {
+  --font-serif-display: 'Sora', 'Manrope', -apple-system, sans-serif;
+  --font-sans-ui: 'Figtree', 'Public Sans', -apple-system, sans-serif;
+  --font-mono-data: 'Space Grotesk', 'IBM Plex Mono', ui-monospace, monospace;
+  --surface-sunken: #F1F3F6;
+}
+body { margin: 0; font-variant-numeric: tabular-nums; background: #101114; font-family: var(--font-sans-ui); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+a { color: var(--text-link); text-decoration: none; }
+a:hover { color: var(--text-link-hover); }
+h1, h2, h3, h4, p { margin: 0; }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100%; overflow-x:hidden; background:#101114">
+
+  <div id="site-nav" style="position:fixed; top:0; left:0; right:0; zIndex:40; background:transparent; borderBottom:1px solid transparent; transition:background 260ms ease, border-color 260ms ease, backdrop-filter 260ms ease; overflow:hidden">
+    <div style="position:absolute; inset:0 0 auto 0; height:150%; pointerEvents:none; background:linear-gradient(180deg, rgba(16,17,20,0.62) 0%, rgba(16,17,20,0.28) 55%, rgba(16,17,20,0) 100%)"></div>
+    <div style="position:relative; display:flex; alignItems:center; justifyContent:space-between; gap:20px; padding:14px clamp(18px,4vw,56px); flexWrap:wrap">
+      <a href="/" style="display:flex; alignItems:center; gap:12px">
+        <img src="assets/biofia-logo.png" alt="BioFIA, Biodiversity Finance Innovation Alliance" style="height:41px; width:75px; display:block; filter:brightness(0) invert(1)">
+      </a>
+      <div style="display:flex; alignItems:center; gap:clamp(12px,2vw,28px); flexWrap:wrap">
+        <a href="working-groups" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)" style-hover="{{ navHover }}">Working groups</a>
+        <a href="protocol" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.7)" style-hover="{{ navHover }}">The protocol</a>
+        <a href="alliance" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:#fff">The alliance</a>
+        <a href="/#join" style="display:inline-flex; alignItems:center; background:#fff; color:#14151A; fontFamily:var(--font-sans-ui); fontSize:13.5px; fontWeight:600; padding:9px 18px; borderRadius:var(--radius-pill)" style-hover="{{ ctaHover }}">Join the alliance</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:relative; width:100%; minHeight:min(70vh,660px); display:flex; alignItems:flex-end; overflow:hidden; background:#101114">
+    <img src="assets/aracari.jpg" alt="Collared araçari perched on a mossy branch" style="position:absolute; inset:0; width:100%; height:100%; objectFit:cover; objectPosition:center 40%; display:block">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(16,17,20,0.8) 0%, rgba(16,17,20,0.56) 40%, rgba(16,17,20,0.94) 100%)"></div>
+    <div style="position:relative; width:100%; padding:clamp(56px,8vw,110px) clamp(20px,5vw,64px) clamp(36px,4vw,56px)">
+      <div style="maxWidth:1320px; margin:0 auto">
+        <div style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.16em; textTransform:uppercase; color:var(--dark-accent-clay); marginBottom:22px">The alliance</div>
+        <h1 style="font-family:var(--font-serif-display); fontSize:clamp(34px,5.6vw,76px); lineHeight:1.02; letterSpacing:-0.03em; fontWeight:800; color:#fff; maxWidth:22ch; marginBottom:22px; textWrap:pretty">Twenty-plus organisations already building this.</h1>
+        <p style="fontSize:clamp(16px,1.5vw,20px); lineHeight:1.6; color:rgba(255,255,255,0.86); maxWidth:58ch; textWrap:pretty">Forest protectors, scientists, technologists, lawyers, funders and policy institutions designing one system together.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px); color:#fff">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:clamp(28px,4vw,64px)">
+        <div>
+          <h3 style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:rgba(255,255,255,0.6); marginBottom:22px">Steering committee</h3>
+          <div style="display:flex; flexDirection:column; gap:16px">
+            <div style="display:flex; gap:14px; alignItems:center">
+              <div style="width:42px; height:42px; borderRadius:999px; border:1px solid rgba(255,255,255,0.3); display:flex; alignItems:center; justifyContent:center; font-family:var(--font-mono-data); fontSize:13px; color:#fff; flexShrink:0">DO</div>
+              <div><div style="fontSize:15.5px; fontWeight:600">David Ontaneda</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Founder · Systems Design</div></div>
+            </div>
+            <div style="display:flex; gap:14px; alignItems:center">
+              <div style="width:42px; height:42px; borderRadius:999px; border:1px solid rgba(255,255,255,0.3); display:flex; alignItems:center; justifyContent:center; font-family:var(--font-mono-data); fontSize:13px; color:#fff; flexShrink:0">RJ</div>
+              <div><div style="fontSize:15.5px; fontWeight:600">Rebeca Justicia, PhD</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Founder · Conservation Science</div></div>
+            </div>
+            <div style="display:flex; gap:14px; alignItems:center">
+              <div style="width:42px; height:42px; borderRadius:999px; border:1px solid rgba(255,255,255,0.3); display:flex; alignItems:center; justifyContent:center; font-family:var(--font-mono-data); fontSize:13px; color:#fff; flexShrink:0">WD</div>
+              <div><div style="fontSize:15.5px; fontWeight:600">Wetherbee Dorshow, PhD</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Geospatial &amp; Monitoring Science</div></div>
+            </div>
+            <div style="display:flex; gap:14px; alignItems:center">
+              <div style="width:42px; height:42px; borderRadius:999px; border:1px solid rgba(255,255,255,0.3); display:flex; alignItems:center; justifyContent:center; font-family:var(--font-mono-data); fontSize:13px; color:#fff; flexShrink:0">GH</div>
+              <div><div style="fontSize:15.5px; fontWeight:600">Gunthar Hartwig</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Technology &amp; Operations</div></div>
+            </div>
+            <div style="display:flex; gap:14px; alignItems:center">
+              <div style="width:42px; height:42px; borderRadius:999px; border:1px solid rgba(255,255,255,0.3); display:flex; alignItems:center; justifyContent:center; font-family:var(--font-mono-data); fontSize:13px; color:#fff; flexShrink:0">LB</div>
+              <div><div style="fontSize:15.5px; fontWeight:600">Laurie Benson</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Governance</div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:rgba(255,255,255,0.6); marginBottom:22px">Advisors</h3>
+          <div style="display:flex; flexDirection:column; gap:14px">
+            <div><div style="fontSize:15.5px; fontWeight:600">Patrick Field</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Ethics &amp; Integrity</div></div>
+            <div><div style="fontSize:15.5px; fontWeight:600">Jennifer Lasimbang</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Direct Access Mechanism</div></div>
+            <div><div style="fontSize:15.5px; fontWeight:600">Harold Hallstein</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Finance</div></div>
+            <div><div style="fontSize:15.5px; fontWeight:600">Catherine Yrisarri</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Communications</div></div>
+            <div><div style="fontSize:15.5px; fontWeight:600">Leo Cerda</div><div style="fontSize:13px; color:rgba(255,255,255,0.6)">Governance</div></div>
+            <div style="fontSize:13px; color:rgba(255,255,255,0.45); fontStyle:italic">and others across policy, market strategy and institutional adoption</div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:var(--dark-accent-clay); marginBottom:22px">Ancestral futures</h3>
+          <p style="fontSize:16.5px; lineHeight:1.66; color:rgba(255,255,255,0.86); marginBottom:16px; textWrap:pretty">The communities who have protected these forests for generations are not stakeholders to consult. They are the intelligence layer of the system, carrying ancestral ways of knowing that have sustained these ecosystems across centuries and that guide where we go next.</p>
+          <p style="fontSize:16.5px; lineHeight:1.66; color:#fff; fontWeight:600; textWrap:pretty">Indigenous wisdom is not a legacy to preserve. It is a living design principle for the world we are building.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="padding:0 clamp(20px,5vw,64px) clamp(48px,7vw,96px); color:#fff">
+    <div style="maxWidth:1320px; margin:0 auto">
+      <div style="borderTop:1px solid #28292E; paddingTop:clamp(28px,3.5vw,44px); marginBottom:clamp(28px,3.5vw,44px)">
+        <h3 style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:rgba(255,255,255,0.6); marginBottom:22px">Thought partners</h3>
+        <div style="display:flex; gap:clamp(12px,1.6vw,20px); flexWrap:wrap">
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/maquipucuna.png" alt="Fundación Maquipucuna" style="maxHeight:48px; maxWidth:150px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/hakhu.png" alt="Hakhu Foundation" style="maxHeight:48px; maxWidth:150px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/earth-analytic.png" alt="Earth Analytic" style="maxHeight:44px; maxWidth:160px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/sankala-group.jpg" alt="Sankala Group" style="maxHeight:40px; maxWidth:160px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/nature-investment-hub.png" alt="Nature Investment Hub" style="maxHeight:48px; maxWidth:160px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/esri.png" alt="Esri" style="maxHeight:40px; maxWidth:140px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/planetaryx.png" alt="PlanetaryX" style="maxHeight:44px; maxWidth:150px; objectFit:contain; display:block"></div>
+        </div>
+      </div>
+
+      <div style="borderTop:1px solid #28292E; paddingTop:clamp(28px,3.5vw,44px)">
+        <h3 style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.14em; textTransform:uppercase; color:rgba(255,255,255,0.6); marginBottom:22px">Funding partners</h3>
+        <div style="display:flex; gap:clamp(12px,1.6vw,20px); flexWrap:wrap">
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/rainforest-trust.png" alt="Rainforest Trust" style="maxHeight:48px; maxWidth:170px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/bezos-earth-fund.png" alt="Bezos Earth Fund" style="maxHeight:52px; maxWidth:160px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/puente-institute.png" alt="Puente Institute" style="maxHeight:52px; maxWidth:150px; objectFit:contain; display:block"></div>
+          <div style="background:#fff; borderRadius:var(--radius-sm); padding:14px 20px; display:flex; alignItems:center; justifyContent:center; height:76px"><img src="assets/logos/maquipucuna.png" alt="Fundación Maquipucuna" style="maxHeight:48px; maxWidth:150px; objectFit:contain; display:block"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--color-indigo-dark); color:#fff; padding:clamp(48px,7vw,96px) clamp(20px,5vw,64px)">
+    <div style="maxWidth:1320px; margin:0 auto; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(24px,4vw,64px); alignItems:center">
+      <h2 style="font-family:var(--font-serif-display); fontSize:clamp(24px,2.8vw,40px); lineHeight:1.1; letterSpacing:-0.02em; fontWeight:800; color:#fff; textWrap:pretty">Add your organisation to the alliance.</h2>
+      <div>
+        <p style="fontSize:var(--text-body-lg); lineHeight:1.66; color:rgba(255,255,255,0.8); marginBottom:24px; textWrap:pretty">We are convening funders, protectors, scientists, technologists and policymakers who share one conviction: standing forests are the most important asset on Earth, and the people protecting them should hold it.</p>
+        <div style="display:flex; gap:14px; flexWrap:wrap; alignItems:center">
+          <a href="/#join" style="display:inline-flex; alignItems:center; gap:10px; background:#fff; color:var(--color-indigo-dark); fontSize:15.5px; fontWeight:600; padding:14px 26px; borderRadius:var(--radius-pill)" style-hover="{{ ctaHover }}">Join the alliance</a>
+          <a href="mailto:info@biofia.org?subject=Request%20for%20the%20BioFIA%20executive%20brief" style="font-family:var(--font-mono-data); fontSize:11.5px; letterSpacing:0.1em; textTransform:uppercase; color:var(--dark-accent-clay); borderBottom:1px solid currentColor; paddingBottom:4px">Request the executive brief</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#101114; color:#fff; padding:clamp(32px,4vw,52px) clamp(20px,5vw,64px); borderTop:1px solid #28292E">
+    <div style="maxWidth:1320px; margin:0 auto; display:flex; justifyContent:space-between; gap:24px; flexWrap:wrap; alignItems:center">
+      <a href="/"><img src="assets/biofia-logo.png" alt="BioFIA" style="height:34px; width:59px; display:block; filter:brightness(0) invert(1)"></a>
+      <div style="display:flex; gap:clamp(14px,2vw,28px); flexWrap:wrap">
+        <a href="working-groups" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">Working groups</a>
+        <a href="protocol" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">The protocol</a>
+        <a href="alliance" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">The alliance</a>
+        <a href="https://standingforests.org" target="_blank" rel="noopener" style="font-family:var(--font-mono-data); fontSize:12px; letterSpacing:0.1em; textTransform:uppercase; color:rgba(255,255,255,0.55)">standingforests.org</a>
+      </div>
+      <div style="font-family:var(--font-mono-data); fontSize:10.5px; color:rgba(255,255,255,0.35); letterSpacing:0.06em">CC BY-NC-SA 4.0 · BIOFIA 2026</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const nav = document.getElementById('site-nav');
+    if (nav) {
+      const onNavScroll = () => {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        const solid = y > 48;
+        nav.style.background = solid ? 'rgba(16,17,20,0.72)' : 'transparent';
+        nav.style.backdropFilter = solid ? 'saturate(150%) blur(12px)' : 'none';
+        nav.style.webkitBackdropFilter = solid ? 'saturate(150%) blur(12px)' : 'none';
+        nav.style.borderBottom = solid ? '1px solid rgba(255,255,255,0.12)' : '1px solid transparent';
+      };
+      onNavScroll();
+      window.addEventListener('scroll', onNavScroll, { passive: true });
+      this._navScroll = onNavScroll;
+    }
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; el.setAttribute('data-revealed', '1'); };
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { show(e.target); if (this._io) this._io.unobserve(e.target); } });
+    }, { threshold: 0.04, rootMargin: '0px 0px -4% 0px' });
+    els.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (el.getAttribute('data-revealed') === '1' || r.top < window.innerHeight * 0.92) { show(el); return; }
+      el.style.transition = 'opacity 520ms ease, transform 520ms ease';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      this._io.observe(el);
+    });
+    this._sweepTimer = setTimeout(() => els.forEach(show), 6000);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._sweepTimer) clearTimeout(this._sweepTimer);
+    if (this._navScroll) window.removeEventListener('scroll', this._navScroll);
+  }
+
+  renderVals() {
+    return {
+      navHover: { color: '#fff' },
+      ctaHover: { filter: 'brightness(0.92)' }
+    };
+  }
+}
+</script>
+</body>
+</html>
